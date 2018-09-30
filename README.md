@@ -2,7 +2,7 @@
 * Stack 
 * Queue
 * priority Queue
-###Stack
+### Stack
 ```
 Stack stack = new Stack();
 stack.isEmpty();
