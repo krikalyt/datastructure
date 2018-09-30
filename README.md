@@ -1,10 +1,10 @@
 # datastructure
-## Stack 
-<code>Stack stack = new Stack();\n
-stack.isEmpty();\n
-stack.push(5);\n
-stack.push(3);\n
-stack.pop();\n
+### Stack 
+<code>Stack stack = new Stack();<br/>
+stack.isEmpty();<br/>
+stack.push(5);<br/>
+stack.push(3);<br/>
+stack.pop();<br/>
 stack.show();</code>
-## Queue
-## priority Queue
+### Queue
+### priority Queue
