@@ -3,7 +3,7 @@
 * Queue
 * priority Queue
 ### Stack
-```
+```python
 Stack stack = new Stack();
 stack.isEmpty();
 stack.push(5);
