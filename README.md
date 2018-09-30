@@ -11,5 +11,5 @@ stack.push(3);
 stack.pop();
 stack.show();
 ```
-
+## Author
 [LinkedIn](http://linkedin.com/in/krikalyt)
