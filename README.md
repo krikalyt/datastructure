@@ -17,11 +17,11 @@ stack.show();
 ### Queue
  ```
 Queue queue = new Queue();
-stack.isEmpty();
-stack.inQueue(5);
-stack.inQueue(3);
-stack.deQueue();
-stack.show();
+queue.isEmpty();
+queue.inQueue(5);
+queue.inQueue(3);
+queue.deQueue();
+queue.show();
  ```
 ## Author
 [LinkedIn](http://linkedin.com/in/krikalyt)
