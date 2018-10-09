@@ -9,6 +9,7 @@ public class main {
         binaryTreeUsingArray.insertroot(10);
         binaryTreeUsingArray.insert(1,20);
         binaryTreeUsingArray.insert(2,31);
-
+        infixtopostfix infixtopostfix = new infixtopostfix("A+B*C+D");
+        System.out.println(infixtopostfix.getTheResult());
     }
 }
