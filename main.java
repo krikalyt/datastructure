@@ -1,15 +1,19 @@
 package datastructurebyKrishna;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
 import java.util.Date;
 import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) throws Exception{
-        BinaryTreeUsingArray binaryTreeUsingArray = new BinaryTreeUsingArray(3);
-        binaryTreeUsingArray.insertroot(10);
-        binaryTreeUsingArray.insert(1,20);
-        binaryTreeUsingArray.insert(2,31);
-        infixtopostfix infixtopostfix = new infixtopostfix("A+B*C+D");
-        System.out.println(infixtopostfix.getTheResult());
+//        ScriptEngineManager mgr = new ScriptEngineManager();
+//        ScriptEngine scriptEngine = mgr.getEngineByName("JavaScript");
+//        String foo = "40+1";
+//        System.out.println(scriptEngine.eval(foo));
+//        infixtopostfix infixtopostfix = new infixtopostfix("a-b/c");
+//        System.out.println(infixtopostfix.getTheResult());
+//        towerofhonoi.towerofhonoi(3,'a','b','c');
     }
 }
+

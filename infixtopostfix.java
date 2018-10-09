@@ -1,7 +1,5 @@
 package datastructurebyKrishna;
-
 import java.util.Stack;
-
 public class infixtopostfix {
     private String expression;
     private String result = "";
@@ -51,7 +49,6 @@ public class infixtopostfix {
                     }
                 }
             }
-
             i++;
         }
         return result;
