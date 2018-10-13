@@ -54,7 +54,7 @@ public class infixtopostfix {
         return result;
     }
 
-    private int isoperator(char ch)
+    public static int isoperator(char ch)
     {
         switch (ch)
         {
