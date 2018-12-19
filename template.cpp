@@ -35,6 +35,11 @@ public:
         }
         return input;
     }
+    
+    template <typename T,typename U,typename V>
+    T findSmaller(T input, U input2, V input3){
+        return input+input2+input3;
+    }
 };
 
 
