@@ -5,6 +5,7 @@ using namespace std;
 int main(int number,char **args)
 {
 
+    vector<int> vint2 =  { 10, 20, 30 }; 
     vector<int> vint;
     vector<int> ::iterator it;
 
