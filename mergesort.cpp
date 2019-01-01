@@ -1,76 +1,72 @@
 #include <iostream>
 using namespace std;
-void merge(int arr[], int start, int middle, int last);
+void merge(int arr[], int first, int m, int last);
 void mergesort(int arr[], int start, int last);
 int main(int argm,char **args)
 {
-	int arr[] = { 8,22,10};
-	merge(arr,0,1,2);
-	for(int i=0;i<=2;i++)
+    int arr[] = { 8,-12,22,18,25,29};
+    mergesort(arr,0,5);
+    for(int i=0;i<=5;i++)
     {
         cout << arr[i] << endl;
     }
-
-	return 0;
+    return 0;
 }
 void mergesort(int arr[], int start, int last)
 {
-	if (start < last)
-	{
-		int middle = start + ((last - start) / 2);
-		mergesort(arr, start, middle);
-		mergesort(arr, middle+1, last);
-		merge(arr, start, middle, last);
-	}
+    if (start < last)
+    {
+        int middle = start + ((last - start) / 2);
+        mergesort(arr, start, middle);
+        mergesort(arr, middle+1, last);
+        merge(arr, start, middle, last);
+    }
 }
-void merge(int arr[], int start, int middle, int last)
+
+
+void merge(int arr[], int first, int middle, int last)
 {
-	int sizeofone = middle - start + 1;
-	int sizeoftwo = last - middle;
-	int arr1[sizeofone];
-	int arr2[sizeoftwo];
+    int sizeofone = middle - first + 1;
+    int sizeoftwo =  last - middle;
 
-	for (int i = 0; i < sizeofone; i++)
-	{
-		arr1[i] = arr[i];
-	}
 
-	for (int i = 0; i < sizeoftwo; i++)
-	{
-		arr2[i] = arr[middle+1+i];
-	}
+    int *Left = new int[sizeofone];
+    int *Right = new int[sizeoftwo];
 
-	int totalsize = sizeofone + sizeoftwo;
-	int f = 0;
-	int s = 0;
-    int i= start;
+    for (int i = 0; i < sizeofone; i++)
+        Left[i] = arr[first + i];
+    for (int i = 0; i < sizeoftwo; i++)
+        Right[i] = arr[middle + 1+ i];
 
-    while(f <= middle && s <= last)
+    int i = 0;
+    int j = 0;
+    int k = first;
+    
+    while (i < sizeofone && j < sizeoftwo)
     {
-        if(arr1[f]<=arr2[s])
+        if (Left[i] <= Right[j])
         {
-            arr[i] = arr1[f];
-            f++;
+            arr[k] = Left[i];
+            i++;
         }
-        else{
-            arr[i] = arr2[s];
-            s++;
+        else
+        {
+            arr[k] = Right[j];
+            j++;
         }
-        i++;
+        k++;
     }
-    i--;
-
-    while(f <= middle)
+    
+    while (i < sizeofone)
     {
-        arr[i] = arr1[f];
-        f++;
+        arr[k] = Left[i];
         i++;
+        k++;
     }
-
-    while(s <= last)
+    while (j < sizeoftwo)
     {
-        arr[i] = arr1[s];
-        s++;
-        i++;
+        arr[k] = Right[j];
+        j++;
+        k++;
     }
 }
