@@ -4,10 +4,7 @@
 #include <algorithm>
 #include <queue>
 using namespace std;
-void printall(int v,vector<bool> tobeprint)
-{
 
-}
 struct Graph{
 public:
     vector<int> *vertex;
