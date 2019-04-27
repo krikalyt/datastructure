@@ -16,7 +16,7 @@ class mycompare{
 public:
     int operator() (const pair<int,int>& p1,const pair<int,int>& p2)
     {
-        return p1.first<p2.second;
+        return p1.first>p2.first;
     }
 };
 void dijkastra(int source,vector<int> abc,vector<pair<int,int>> edge[])
@@ -43,6 +43,7 @@ void dijkastra(int source,vector<int> abc,vector<pair<int,int>> edge[])
             }
             pathcost.push(make_pair(finalresult[m.second],m.second));
         }
+    
         source = (pathcost.top()).second;
     }
 }
@@ -70,7 +71,7 @@ int main(void)
             edge[from-1].push_back(make_pair(cost,to-1));
         }
         
-        dijkastra(5,abc,edge);
+        dijkastra(0,abc,edge);
         for(int x : finalresult)
         {
             if(x==INT_MAX)
@@ -87,8 +88,25 @@ int main(void)
     return 0;
 }
 
+//testcase 1
+/*
+1
+6 11
+1 2 50
+1 4 10
+4 1 10
+4 5 15
+5 2 20
+2 4 15
+2 3 10
+6 5 3
+1 3 45
+5 3 35
+3 5 30
 
-//input.txt tested on
+*/
+
+//testcase 2
 /*
 1
 6 10
@@ -102,4 +120,20 @@ int main(void)
 5 6 2
 6 5 2
 5 2 9
+ 
+*/
+
+
+//testcase 3
 /*
+1
+6 8
+1 2 2
+2 4 7
+1 3 4
+2 3 1
+5 4 2
+5 6 5
+4 6 1
+3 5 3
+*/
