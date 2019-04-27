@@ -49,12 +49,12 @@ void dijkastra(int source,vector<int> abc,vector<pair<int,int>> edge[])
 }
 int main(void)
 {
-    filei;
+//     filei;
     short testcase;
     cin >> testcase;
     while(testcase--)
     {
-        int N,M;
+        int N,M,S;
         cin >> N >> M;
         vector<int> abc(N);
         finalresult.resize(N);
@@ -69,20 +69,26 @@ int main(void)
             int from,to,cost;
             cin >> from >> to >> cost;
             edge[from-1].push_back(make_pair(cost,to-1));
+            edge[to-1].push_back(make_pair(cost,from-1));
         }
         
-        dijkastra(0,abc,edge);
+        cin >> S;
+        dijkastra(S-1,abc,edge);
         for(int x : finalresult)
         {
             if(x==INT_MAX)
             {
-                cout << "not possible" << endl;
+                cout << -1 << " ";
+            }
+            else if(x==0)
+            {
+                
             }
             else{
-                cout << x << endl;
+                cout << x << " ";
             }
         }
-            
+        cout << endl;
         finalresult.clear();
     }
     return 0;
@@ -103,7 +109,7 @@ int main(void)
 1 3 45
 5 3 35
 3 5 30
-
+1
 */
 
 //testcase 2
@@ -120,7 +126,7 @@ int main(void)
 5 6 2
 6 5 2
 5 2 9
- 
+1
 */
 
 
@@ -136,4 +142,5 @@ int main(void)
 5 6 5
 4 6 1
 3 5 3
+1
 */
