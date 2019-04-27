@@ -144,3 +144,6 @@ int main(void)
 3 5 3
 1
 */
+
+
+//tested for the problem https://www.hackerrank.com/challenges/dijkstrashortreach/problem
